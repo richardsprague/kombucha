@@ -1,0 +1,1785 @@
+{
+  "download_time_utc": "2016-09-11T14:22:04Z",
+  "sequencing_revision": "75461",
+  "site": "mouth",
+  "sampling_time": "2016-07-30T00:00:00.000Z",
+  "notes": "Morning first thing. Mouth feels dry and sticky (maybe yesterday's 6 servings of kombucha?) weather last few days has been hot as well.",
+  "ubiome_bacteriacounts": [
+    {
+      "taxon": 1,
+      "parent": 0,
+      "count": 102623,
+      "count_norm": 1000000,
+      "tax_name": "root",
+      "tax_rank": "root"
+    },
+    {
+      "taxon": 2,
+      "parent": 131567,
+      "count": 102623,
+      "count_norm": 1000000,
+      "tax_name": "Bacteria",
+      "tax_rank": "superkingdom"
+    },
+    {
+      "taxon": 136,
+      "parent": 203692,
+      "count": 49,
+      "count_norm": 477,
+      "tax_name": "Spirochaetales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 194,
+      "parent": 72294,
+      "count": 341,
+      "count_norm": 3322,
+      "tax_name": "Campylobacter",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 286,
+      "parent": 135621,
+      "count": 20,
+      "count_norm": 194,
+      "tax_name": "Pseudomonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 356,
+      "parent": 28211,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Rhizobiales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 407,
+      "parent": 119045,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Methylobacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 468,
+      "parent": 72274,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Moraxellaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 469,
+      "parent": 468,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Acinetobacter",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 481,
+      "parent": 206351,
+      "count": 5172,
+      "count_norm": 50398,
+      "tax_name": "Neisseriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 482,
+      "parent": 481,
+      "count": 5139,
+      "count_norm": 50076,
+      "tax_name": "Neisseria",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 490,
+      "parent": 482,
+      "count": 16,
+      "count_norm": 155,
+      "tax_name": "Neisseria sicca",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 495,
+      "parent": 482,
+      "count": 79,
+      "count_norm": 769,
+      "tax_name": "Neisseria elongata",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 538,
+      "parent": 481,
+      "count": 27,
+      "count_norm": 263,
+      "tax_name": "Eikenella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 539,
+      "parent": 538,
+      "count": 27,
+      "count_norm": 263,
+      "tax_name": "Eikenella corrodens",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 712,
+      "parent": 135625,
+      "count": 20656,
+      "count_norm": 201280,
+      "tax_name": "Pasteurellaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 713,
+      "parent": 712,
+      "count": 643,
+      "count_norm": 6265,
+      "tax_name": "Actinobacillus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 724,
+      "parent": 712,
+      "count": 18058,
+      "count_norm": 175964,
+      "tax_name": "Haemophilus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 727,
+      "parent": 724,
+      "count": 12920,
+      "count_norm": 125897,
+      "tax_name": "Haemophilus influenzae",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 729,
+      "parent": 724,
+      "count": 5095,
+      "count_norm": 49647,
+      "tax_name": "Haemophilus parainfluenzae",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 732,
+      "parent": 416916,
+      "count": 503,
+      "count_norm": 4901,
+      "tax_name": "Aggregatibacter aphrophilus",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 739,
+      "parent": 416916,
+      "count": 22,
+      "count_norm": 214,
+      "tax_name": "Aggregatibacter segnis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 745,
+      "parent": 712,
+      "count": 1420,
+      "count_norm": 13837,
+      "tax_name": "Pasteurella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 758,
+      "parent": 745,
+      "count": 1420,
+      "count_norm": 13837,
+      "tax_name": "Pasteurella pneumotropica",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 824,
+      "parent": 194,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Campylobacter gracilis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 836,
+      "parent": 171551,
+      "count": 5287,
+      "count_norm": 51518,
+      "tax_name": "Porphyromonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 838,
+      "parent": 171552,
+      "count": 2115,
+      "count_norm": 20609,
+      "tax_name": "Prevotella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 848,
+      "parent": 203492,
+      "count": 2946,
+      "count_norm": 28707,
+      "tax_name": "Fusobacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 851,
+      "parent": 848,
+      "count": 5,
+      "count_norm": 48,
+      "tax_name": "Fusobacterium nucleatum",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 860,
+      "parent": 848,
+      "count": 1446,
+      "count_norm": 14090,
+      "tax_name": "Fusobacterium periodonticum",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 868,
+      "parent": 135615,
+      "count": 19,
+      "count_norm": 185,
+      "tax_name": "Cardiobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 906,
+      "parent": 31977,
+      "count": 8,
+      "count_norm": 77,
+      "tax_name": "Megasphaera",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 963,
+      "parent": 75682,
+      "count": 14,
+      "count_norm": 136,
+      "tax_name": "Herbaspirillum",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 970,
+      "parent": 31977,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Selenomonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 976,
+      "parent": 68336,
+      "count": 9097,
+      "count_norm": 88644,
+      "tax_name": "Bacteroidetes",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 1016,
+      "parent": 49546,
+      "count": 612,
+      "count_norm": 5963,
+      "tax_name": "Capnocytophaga",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1019,
+      "parent": 1016,
+      "count": 63,
+      "count_norm": 613,
+      "tax_name": "Capnocytophaga sputigena",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1224,
+      "parent": 2,
+      "count": 26365,
+      "count_norm": 256911,
+      "tax_name": "Proteobacteria",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 1236,
+      "parent": 1224,
+      "count": 20698,
+      "count_norm": 201689,
+      "tax_name": "Gammaproteobacteria",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 1239,
+      "parent": 2,
+      "count": 58909,
+      "count_norm": 574033,
+      "tax_name": "Firmicutes",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 1257,
+      "parent": 186804,
+      "count": 14,
+      "count_norm": 136,
+      "tax_name": "Peptostreptococcus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1266,
+      "parent": 31979,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Sarcina",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1268,
+      "parent": 85006,
+      "count": 2300,
+      "count_norm": 22412,
+      "tax_name": "Micrococcaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 1279,
+      "parent": 90964,
+      "count": 9,
+      "count_norm": 87,
+      "tax_name": "Staphylococcus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1300,
+      "parent": 186826,
+      "count": 38233,
+      "count_norm": 372557,
+      "tax_name": "Streptococcaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 1301,
+      "parent": 1300,
+      "count": 38233,
+      "count_norm": 372557,
+      "tax_name": "Streptococcus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1302,
+      "parent": 1301,
+      "count": 561,
+      "count_norm": 5466,
+      "tax_name": "Streptococcus gordonii",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1308,
+      "parent": 1301,
+      "count": 34,
+      "count_norm": 331,
+      "tax_name": "Streptococcus thermophilus",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1378,
+      "parent": 539738,
+      "count": 13971,
+      "count_norm": 136139,
+      "tax_name": "Gemella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1380,
+      "parent": 84107,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Atopobium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1383,
+      "parent": 1380,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Atopobium rimae",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1385,
+      "parent": 91061,
+      "count": 13980,
+      "count_norm": 136226,
+      "tax_name": "Bacillales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 1653,
+      "parent": 85007,
+      "count": 90,
+      "count_norm": 876,
+      "tax_name": "Corynebacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 1654,
+      "parent": 2049,
+      "count": 343,
+      "count_norm": 3342,
+      "tax_name": "Actinomyces",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1716,
+      "parent": 1653,
+      "count": 90,
+      "count_norm": 876,
+      "tax_name": "Corynebacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1720,
+      "parent": 1716,
+      "count": 52,
+      "count_norm": 506,
+      "tax_name": "Corynebacterium sp.",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1743,
+      "parent": 31957,
+      "count": 26,
+      "count_norm": 253,
+      "tax_name": "Propionibacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1760,
+      "parent": 201174,
+      "count": 2840,
+      "count_norm": 27674,
+      "tax_name": "Actinobacteria",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 1762,
+      "parent": 85007,
+      "count": 53,
+      "count_norm": 516,
+      "tax_name": "Mycobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 1763,
+      "parent": 1762,
+      "count": 4,
+      "count_norm": 38,
+      "tax_name": "Mycobacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 2037,
+      "parent": 85003,
+      "count": 2830,
+      "count_norm": 27576,
+      "tax_name": "Actinomycetales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 2047,
+      "parent": 32207,
+      "count": 1152,
+      "count_norm": 11225,
+      "tax_name": "Rothia dentocariosa",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 2049,
+      "parent": 85005,
+      "count": 343,
+      "count_norm": 3342,
+      "tax_name": "Actinomycetaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 2323,
+      "parent": 2,
+      "count": 349,
+      "count_norm": 3400,
+      "tax_name": "unclassified Bacteria",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 2717,
+      "parent": 868,
+      "count": 19,
+      "count_norm": 185,
+      "tax_name": "Cardiobacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 2718,
+      "parent": 2717,
+      "count": 19,
+      "count_norm": 185,
+      "tax_name": "Cardiobacterium hominis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 2740,
+      "parent": 186807,
+      "count": 4,
+      "count_norm": 38,
+      "tax_name": "Peptococcus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 13687,
+      "parent": 41297,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Sphingomonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 28112,
+      "parent": 195950,
+      "count": 13,
+      "count_norm": 126,
+      "tax_name": "Tannerella forsythia",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 28124,
+      "parent": 836,
+      "count": 14,
+      "count_norm": 136,
+      "tax_name": "Porphyromonas endodontalis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 28133,
+      "parent": 838,
+      "count": 105,
+      "count_norm": 1023,
+      "tax_name": "Prevotella nigrescens",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 28135,
+      "parent": 838,
+      "count": 419,
+      "count_norm": 4082,
+      "tax_name": "Prevotella oris",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 28211,
+      "parent": 1224,
+      "count": 15,
+      "count_norm": 146,
+      "tax_name": "Alphaproteobacteria",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 28216,
+      "parent": 1224,
+      "count": 5309,
+      "count_norm": 51733,
+      "tax_name": "Betaproteobacteria",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 28221,
+      "parent": 68525,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Deltaproteobacteria",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 29465,
+      "parent": 31977,
+      "count": 3468,
+      "count_norm": 33793,
+      "tax_name": "Veillonella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 29547,
+      "parent": 68525,
+      "count": 341,
+      "count_norm": 3322,
+      "tax_name": "Epsilonproteobacteria",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 31957,
+      "parent": 85009,
+      "count": 44,
+      "count_norm": 428,
+      "tax_name": "Propionibacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 31977,
+      "parent": 909929,
+      "count": 3526,
+      "count_norm": 34358,
+      "tax_name": "Veillonellaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 31979,
+      "parent": 186802,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Clostridiaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 32066,
+      "parent": 2,
+      "count": 4996,
+      "count_norm": 48683,
+      "tax_name": "Fusobacteria",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 32067,
+      "parent": 1129771,
+      "count": 2050,
+      "count_norm": 19976,
+      "tax_name": "Leptotrichia",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 32207,
+      "parent": 1268,
+      "count": 2300,
+      "count_norm": 22412,
+      "tax_name": "Rothia",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 33033,
+      "parent": 543311,
+      "count": 14,
+      "count_norm": 136,
+      "tax_name": "Parvimonas micra",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 35832,
+      "parent": 194924,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Bilophila",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 36862,
+      "parent": 224471,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Ideonella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 39948,
+      "parent": 31977,
+      "count": 9,
+      "count_norm": 87,
+      "tax_name": "Dialister",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 39950,
+      "parent": 39948,
+      "count": 6,
+      "count_norm": 58,
+      "tax_name": "Dialister pneumosintes",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 41275,
+      "parent": 76892,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Brevundimonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 41297,
+      "parent": 204457,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Sphingomonadaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 41976,
+      "parent": 836,
+      "count": 5073,
+      "count_norm": 49433,
+      "tax_name": "Porphyromonas catoniae",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 43675,
+      "parent": 32207,
+      "count": 1072,
+      "count_norm": 10446,
+      "tax_name": "Rothia mucilaginosa",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 43994,
+      "parent": 186803,
+      "count": 21,
+      "count_norm": 204,
+      "tax_name": "Johnsonella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 43995,
+      "parent": 43994,
+      "count": 4,
+      "count_norm": 38,
+      "tax_name": "Johnsonella ignava",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 43996,
+      "parent": 186803,
+      "count": 17,
+      "count_norm": 165,
+      "tax_name": "Catonella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 45243,
+      "parent": 1016,
+      "count": 11,
+      "count_norm": 107,
+      "tax_name": "Capnocytophaga haemolytica",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 46123,
+      "parent": 186827,
+      "count": 138,
+      "count_norm": 1344,
+      "tax_name": "Abiotrophia",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 46124,
+      "parent": 117563,
+      "count": 257,
+      "count_norm": 2504,
+      "tax_name": "Granulicatella adiacens",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 47670,
+      "parent": 119060,
+      "count": 93,
+      "count_norm": 906,
+      "tax_name": "Lautropia",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 48736,
+      "parent": 119060,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Ralstonia",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 49546,
+      "parent": 200644,
+      "count": 1329,
+      "count_norm": 12950,
+      "tax_name": "Flavobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 51048,
+      "parent": 713,
+      "count": 643,
+      "count_norm": 6265,
+      "tax_name": "Actinobacillus porcinus",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 52769,
+      "parent": 1654,
+      "count": 7,
+      "count_norm": 68,
+      "tax_name": "Actinomyces gerencseriae",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 52773,
+      "parent": 1654,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Actinomyces meyeri",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 55565,
+      "parent": 1654,
+      "count": 7,
+      "count_norm": 68,
+      "tax_name": "Actinomyces graevenitzii",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 59732,
+      "parent": 49546,
+      "count": 13,
+      "count_norm": 126,
+      "tax_name": "Chryseobacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 59735,
+      "parent": 49546,
+      "count": 701,
+      "count_norm": 6830,
+      "tax_name": "Bergeyella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 60133,
+      "parent": 838,
+      "count": 34,
+      "count_norm": 331,
+      "tax_name": "Prevotella pallens",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 61592,
+      "parent": 1716,
+      "count": 22,
+      "count_norm": 214,
+      "tax_name": "Corynebacterium durum",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 68336,
+      "parent": 2,
+      "count": 9097,
+      "count_norm": 88644,
+      "tax_name": "Bacteroidetes/Chlorobi group",
+      "tax_rank": "superphylum"
+    },
+    {
+      "taxon": 68525,
+      "parent": 1224,
+      "count": 343,
+      "count_norm": 3342,
+      "tax_name": "delta/epsilon subdivisions",
+      "tax_rank": "subphylum"
+    },
+    {
+      "taxon": 72274,
+      "parent": 1236,
+      "count": 23,
+      "count_norm": 224,
+      "tax_name": "Pseudomonadales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 72294,
+      "parent": 213849,
+      "count": 341,
+      "count_norm": 3322,
+      "tax_name": "Campylobacteraceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 75682,
+      "parent": 80840,
+      "count": 14,
+      "count_norm": 136,
+      "tax_name": "Oxalobacteraceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 76122,
+      "parent": 1283313,
+      "count": 143,
+      "count_norm": 1393,
+      "tax_name": "Alloprevotella tannerae",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 76892,
+      "parent": 204458,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Caulobacteraceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 80840,
+      "parent": 28216,
+      "count": 137,
+      "count_norm": 1334,
+      "tax_name": "Burkholderiales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 80864,
+      "parent": 80840,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Comamonadaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 80865,
+      "parent": 80864,
+      "count": 7,
+      "count_norm": 68,
+      "tax_name": "Delftia",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 82202,
+      "parent": 31977,
+      "count": 25,
+      "count_norm": 243,
+      "tax_name": "Centipeda",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 82203,
+      "parent": 82202,
+      "count": 19,
+      "count_norm": 185,
+      "tax_name": "Centipeda periodontii",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 84107,
+      "parent": 255727,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Coriobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 84998,
+      "parent": 1760,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Coriobacteridae",
+      "tax_rank": "subclass"
+    },
+    {
+      "taxon": 84999,
+      "parent": 84998,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Coriobacteriales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 85003,
+      "parent": 1760,
+      "count": 2830,
+      "count_norm": 27576,
+      "tax_name": "Actinobacteridae",
+      "tax_rank": "subclass"
+    },
+    {
+      "taxon": 85005,
+      "parent": 2037,
+      "count": 343,
+      "count_norm": 3342,
+      "tax_name": "Actinomycineae",
+      "tax_rank": "suborder"
+    },
+    {
+      "taxon": 85006,
+      "parent": 2037,
+      "count": 2300,
+      "count_norm": 22412,
+      "tax_name": "Micrococcineae",
+      "tax_rank": "suborder"
+    },
+    {
+      "taxon": 85007,
+      "parent": 2037,
+      "count": 143,
+      "count_norm": 1393,
+      "tax_name": "Corynebacterineae",
+      "tax_rank": "suborder"
+    },
+    {
+      "taxon": 85009,
+      "parent": 2037,
+      "count": 44,
+      "count_norm": 428,
+      "tax_name": "Propionibacterineae",
+      "tax_rank": "suborder"
+    },
+    {
+      "taxon": 86331,
+      "parent": 543314,
+      "count": 4,
+      "count_norm": 38,
+      "tax_name": "Mogibacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 90964,
+      "parent": 1385,
+      "count": 9,
+      "count_norm": 87,
+      "tax_name": "Staphylococcaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 91061,
+      "parent": 1239,
+      "count": 54957,
+      "count_norm": 535523,
+      "tax_name": "Bacilli",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 92793,
+      "parent": 224471,
+      "count": 16,
+      "count_norm": 155,
+      "tax_name": "Aquabacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 95818,
+      "parent": 2323,
+      "count": 349,
+      "count_norm": 3400,
+      "tax_name": "Candidatus Saccharibacteria",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 117563,
+      "parent": 186828,
+      "count": 2589,
+      "count_norm": 25228,
+      "tax_name": "Granulicatella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 117743,
+      "parent": 976,
+      "count": 1329,
+      "count_norm": 12950,
+      "tax_name": "Flavobacteriia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 119045,
+      "parent": 356,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Methylobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 119060,
+      "parent": 80840,
+      "count": 95,
+      "count_norm": 925,
+      "tax_name": "Burkholderiaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 119065,
+      "parent": 80840,
+      "count": 18,
+      "count_norm": 175,
+      "tax_name": "unclassified Burkholderiales",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 123375,
+      "parent": 128827,
+      "count": 5,
+      "count_norm": 48,
+      "tax_name": "Solobacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 128827,
+      "parent": 526525,
+      "count": 5,
+      "count_norm": 48,
+      "tax_name": "Erysipelotrichaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 131567,
+      "parent": 1,
+      "count": 102623,
+      "count_norm": 1000000,
+      "tax_name": "cellular organisms",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 135615,
+      "parent": 1236,
+      "count": 19,
+      "count_norm": 185,
+      "tax_name": "Cardiobacteriales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 135621,
+      "parent": 72274,
+      "count": 20,
+      "count_norm": 194,
+      "tax_name": "Pseudomonadaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 135625,
+      "parent": 1236,
+      "count": 20656,
+      "count_norm": 201280,
+      "tax_name": "Pasteurellales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 137732,
+      "parent": 117563,
+      "count": 2330,
+      "count_norm": 22704,
+      "tax_name": "Granulicatella elegans",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 156454,
+      "parent": 31977,
+      "count": 6,
+      "count_norm": 58,
+      "tax_name": "Anaeroglobus",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 156456,
+      "parent": 156454,
+      "count": 6,
+      "count_norm": 58,
+      "tax_name": "Anaeroglobus geminatus",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 157688,
+      "parent": 32067,
+      "count": 29,
+      "count_norm": 282,
+      "tax_name": "Leptotrichia hofstadii",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 157692,
+      "parent": 32067,
+      "count": 5,
+      "count_norm": 48,
+      "tax_name": "Leptotrichia goodfellowii",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 171549,
+      "parent": 200643,
+      "count": 7768,
+      "count_norm": 75694,
+      "tax_name": "Bacteroidales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 171551,
+      "parent": 171549,
+      "count": 5333,
+      "count_norm": 51966,
+      "tax_name": "Porphyromonadaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 171552,
+      "parent": 171549,
+      "count": 2416,
+      "count_norm": 23542,
+      "tax_name": "Prevotellaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 186801,
+      "parent": 1239,
+      "count": 421,
+      "count_norm": 4102,
+      "tax_name": "Clostridia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 186802,
+      "parent": 186801,
+      "count": 421,
+      "count_norm": 4102,
+      "tax_name": "Clostridiales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 186803,
+      "parent": 186802,
+      "count": 295,
+      "count_norm": 2874,
+      "tax_name": "Lachnospiraceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 186804,
+      "parent": 186802,
+      "count": 23,
+      "count_norm": 224,
+      "tax_name": "Peptostreptococcaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 186807,
+      "parent": 186802,
+      "count": 4,
+      "count_norm": 38,
+      "tax_name": "Peptococcaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 186813,
+      "parent": 186802,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "unclassified Clostridiales",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 186826,
+      "parent": 91061,
+      "count": 40977,
+      "count_norm": 399296,
+      "tax_name": "Lactobacillales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 186827,
+      "parent": 186826,
+      "count": 138,
+      "count_norm": 1344,
+      "tax_name": "Aerococcaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 186828,
+      "parent": 186826,
+      "count": 2589,
+      "count_norm": 25228,
+      "tax_name": "Carnobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 189723,
+      "parent": 838,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Prevotella micans",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 194924,
+      "parent": 213115,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Desulfovibrionaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 195950,
+      "parent": 171551,
+      "count": 46,
+      "count_norm": 448,
+      "tax_name": "Tannerella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 200643,
+      "parent": 976,
+      "count": 7768,
+      "count_norm": 75694,
+      "tax_name": "Bacteroidia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 200644,
+      "parent": 117743,
+      "count": 1329,
+      "count_norm": 12950,
+      "tax_name": "Flavobacteriales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 201174,
+      "parent": 2,
+      "count": 2840,
+      "count_norm": 27674,
+      "tax_name": "Actinobacteria",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 203490,
+      "parent": 32066,
+      "count": 4996,
+      "count_norm": 48683,
+      "tax_name": "Fusobacteriia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 203491,
+      "parent": 203490,
+      "count": 4996,
+      "count_norm": 48683,
+      "tax_name": "Fusobacteriales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 203492,
+      "parent": 203491,
+      "count": 2946,
+      "count_norm": 28707,
+      "tax_name": "Fusobacteriaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 203691,
+      "parent": 2,
+      "count": 65,
+      "count_norm": 633,
+      "tax_name": "Spirochaetes",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 203692,
+      "parent": 203691,
+      "count": 65,
+      "count_norm": 633,
+      "tax_name": "Spirochaetia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 204457,
+      "parent": 28211,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Sphingomonadales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 204458,
+      "parent": 28211,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Caulobacterales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 206351,
+      "parent": 28216,
+      "count": 5172,
+      "count_norm": 50398,
+      "tax_name": "Neisseriales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 213115,
+      "parent": 28221,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Desulfovibrionales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 213849,
+      "parent": 29547,
+      "count": 341,
+      "count_norm": 3322,
+      "tax_name": "Campylobacterales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 218538,
+      "parent": 39948,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Dialister invisus",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 224471,
+      "parent": 119065,
+      "count": 18,
+      "count_norm": 175,
+      "tax_name": "Burkholderiales Genera incertae sedis",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 255727,
+      "parent": 84999,
+      "count": 10,
+      "count_norm": 97,
+      "tax_name": "Coriobacterineae",
+      "tax_rank": "suborder"
+    },
+    {
+      "taxon": 265975,
+      "parent": 186803,
+      "count": 19,
+      "count_norm": 185,
+      "tax_name": "Oribacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 298794,
+      "parent": 407,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Methylobacterium variabile",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 335058,
+      "parent": 80864,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Pelomonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 341694,
+      "parent": 1257,
+      "count": 14,
+      "count_norm": 136,
+      "tax_name": "Peptostreptococcus stomatis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 354471,
+      "parent": 59735,
+      "count": 567,
+      "count_norm": 5525,
+      "tax_name": "Bergeyella sp. AF14",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 416916,
+      "parent": 712,
+      "count": 525,
+      "count_norm": 5115,
+      "tax_name": "Aggregatibacter",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 425941,
+      "parent": 838,
+      "count": 410,
+      "count_norm": 3995,
+      "tax_name": "Prevotella nanceiensis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 437755,
+      "parent": 186803,
+      "count": 7,
+      "count_norm": 68,
+      "tax_name": "Moryella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 439703,
+      "parent": 838,
+      "count": 6,
+      "count_norm": 58,
+      "tax_name": "Prevotella maculosa",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 467210,
+      "parent": 1164882,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Lachnoanaerobaculum saburreum",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 501783,
+      "parent": 49546,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Cloacibacterium",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 508458,
+      "parent": 2,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Synergistetes",
+      "tax_rank": "phylum"
+    },
+    {
+      "taxon": 526524,
+      "parent": 1239,
+      "count": 5,
+      "count_norm": 48,
+      "tax_name": "Erysipelotrichia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 526525,
+      "parent": 526524,
+      "count": 5,
+      "count_norm": 48,
+      "tax_name": "Erysipelotrichales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 538999,
+      "parent": 186802,
+      "count": 87,
+      "count_norm": 847,
+      "tax_name": "Clostridiales incertae sedis",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 539002,
+      "parent": 1385,
+      "count": 13971,
+      "count_norm": 136139,
+      "tax_name": "Bacillales incertae sedis",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 539738,
+      "parent": 539002,
+      "count": 13971,
+      "count_norm": 136139,
+      "tax_name": "Bacillales Family XI. Incertae Sedis",
+      "tax_rank": "no_rank"
+    },
+    {
+      "taxon": 543310,
+      "parent": 538999,
+      "count": 69,
+      "count_norm": 672,
+      "tax_name": "Clostridiales Family XI. Incertae Sedis",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 543311,
+      "parent": 543310,
+      "count": 69,
+      "count_norm": 672,
+      "tax_name": "Parvimonas",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 543314,
+      "parent": 538999,
+      "count": 13,
+      "count_norm": 126,
+      "tax_name": "Clostridiales Family XIII. Incertae Sedis",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 554406,
+      "parent": 32067,
+      "count": 12,
+      "count_norm": 116,
+      "tax_name": "Leptotrichia hongkongensis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 596085,
+      "parent": 838,
+      "count": 118,
+      "count_norm": 1149,
+      "tax_name": "Prevotella aurantiaca",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 632853,
+      "parent": 47670,
+      "count": 93,
+      "count_norm": 906,
+      "tax_name": "Lautropia sp. TeTO",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 649775,
+      "parent": 508458,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Synergistia",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 649776,
+      "parent": 649775,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Synergistales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 649777,
+      "parent": 649776,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Synergistaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 671218,
+      "parent": 1283313,
+      "count": 79,
+      "count_norm": 769,
+      "tax_name": "Alloprevotella rava",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 671229,
+      "parent": 29465,
+      "count": 1610,
+      "count_norm": 15688,
+      "tax_name": "Veillonella sp. oral taxon 780",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 706435,
+      "parent": 1016,
+      "count": 285,
+      "count_norm": 2777,
+      "tax_name": "Capnocytophaga sp. oral taxon 329",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 710239,
+      "parent": 1016,
+      "count": 3,
+      "count_norm": 29,
+      "tax_name": "Capnocytophaga sp. oral taxon 338",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 713008,
+      "parent": 543311,
+      "count": 52,
+      "count_norm": 506,
+      "tax_name": "Parvimonas sp. oral taxon 393",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 796942,
+      "parent": 1213720,
+      "count": 4,
+      "count_norm": 38,
+      "tax_name": "Stomatobaculum longum",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 909929,
+      "parent": 909932,
+      "count": 3526,
+      "count_norm": 34358,
+      "tax_name": "Selenomonadales",
+      "tax_rank": "order"
+    },
+    {
+      "taxon": 909932,
+      "parent": 1239,
+      "count": 3526,
+      "count_norm": 34358,
+      "tax_name": "Negativicutes",
+      "tax_rank": "class"
+    },
+    {
+      "taxon": 984238,
+      "parent": 1654,
+      "count": 2,
+      "count_norm": 19,
+      "tax_name": "Actinomyces sp. ZSY-1",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1107316,
+      "parent": 482,
+      "count": 632,
+      "count_norm": 6158,
+      "tax_name": "Neisseria oralis",
+      "tax_rank": "species"
+    },
+    {
+      "taxon": 1129771,
+      "parent": 203491,
+      "count": 2050,
+      "count_norm": 19976,
+      "tax_name": "Leptotrichiaceae",
+      "tax_rank": "family"
+    },
+    {
+      "taxon": 1164882,
+      "parent": 186803,
+      "count": 100,
+      "count_norm": 974,
+      "tax_name": "Lachnoanaerobaculum",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1213720,
+      "parent": 186803,
+      "count": 131,
+      "count_norm": 1276,
+      "tax_name": "Stomatobaculum",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1283313,
+      "parent": 171552,
+      "count": 268,
+      "count_norm": 2611,
+      "tax_name": "Alloprevotella",
+      "tax_rank": "genus"
+    },
+    {
+      "taxon": 1481960,
+      "parent": 186804,
+      "count": 9,
+      "count_norm": 87,
+      "tax_name": "Peptoclostridium",
+      "tax_rank": "genus"
+    }
+  ]
+}
