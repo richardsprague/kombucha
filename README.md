@@ -18,6 +18,11 @@ If you have the [uBiome open source python library](https://github.com/ubiome-op
 
 ![Diversity through time](./kombuchaDiversity.png)
 
+# Study the data in R
+
+You can do some interesting statistical analysis on this data if you use the R programming environment. The sample script [kombucha.R](./kombucha.R) will pull all the data into an R environment and draw the following chart:
+
+![Bifidobacterium Levels](./kombuchaBarChart.jpg)
 
 # Going further
 
