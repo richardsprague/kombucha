@@ -1,0 +1,3 @@
+[submodule "ubiome"]
+	path = ubiome
+	url = /Users/sprague/dev/ubiome
