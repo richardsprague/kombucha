@@ -6,8 +6,8 @@
 require(ggplot2)
 source('uBiomeCountReader.R')
 
-rikGut<-read_ubiome_csv("kombucha-gut.csv")
-rikGut.family<-read_ubiome_csv("kombucha-gut.csv",tax_rank="family")
+rikGut<-read_ubiome_csv("kombucha-gut-count.csv")
+rikGut.family<-read_ubiome_csv("kombucha-gut-count.csv",tax_rank="family")
 
 #returns the rows between the two dates (inclusive)
 date_range<-function(df,from,to){
@@ -20,10 +20,10 @@ kombucha<-date_range(rikGut,"2016-07-26","2016-08-05"   )#"2016-07-26","2016-08-
 kombucha.family<-date_range(rikGut.family,"2016-07-26","2016-08-03")
 
 # handle outliers
-kombucha.family<-kombucha.family[-6,] # get rid of the outlier
+#kombucha.family<-kombucha.family[-6,] # get rid of the outlier
 #which(kombucha$Bifidobacterium>50000)  # this is the outlier sample "taken from the second part"
 #kombucha$dates[6]  # second part
-kombucha<-kombucha[-6,]  # get rid of outlier
+#kombucha<-kombucha[-6,]  # get rid of outlier
 #kombucha<-kombucha[-which(kombucha$Clostridium>9000)]
 
 kombucha$experiment <- "none"  # set all days to drink kombucha
@@ -40,8 +40,15 @@ with(kombucha,qplot(dates,Bifidobacterium,geom="line"))
 # plot diversity levels 
 require('vegan')
 #can't do it with this dataset: must use count not count_norm
-# with(kombucha,tapply(count,ssr,function(x) diversity(x,index="simpson")))
+#with(kombucha.family,tapply(count,dates,function(x) diversity(x,index="simpson")))
 
-sapply(kombucha,sd)
-max(kombucha.family[1,-which(colnames(kombucha.family)=="dates")])
+with(kombucha.family,plot(dates,
+                          apply(kombucha.family[,-which(colnames(kombucha.family)=="dates")],
+                                1,function(x) diversity(x,index="simpson")),
+                          ylab="Diversity (Simpson)"
+                          ))
+
+#sapply(kombucha,sd)
+#max(kombucha.family[1,-which(colnames(kombucha.family)=="dates")])
+
 

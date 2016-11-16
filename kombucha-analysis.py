@@ -17,11 +17,11 @@ for root, dirs, files in os.walk("./data"):
              print(os.path.join(root, file))
              sample = ubiome.UbiomeSample(fname=os.path.join(root,file))
              if sample.site == "gut":
-                 kombucha_gut_samples.merge(sample)
+                 kombucha_gut_samples.merge(sample,mergeField="count")
             # if sample.site == "mouth":  # if you want another variable that contains all mouth samples, etc.
 
 # write to a CSV file like this:
-# kombucha_gut_samples.write("kombucha-gut.csv")
+# kombucha_gut_samples.write("kombucha-gut-count.csv")
 
 
 # plot the data
