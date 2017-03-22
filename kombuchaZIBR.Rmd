@@ -1,0 +1,82 @@
+---
+title: "ZIBR Stats Analysis"
+author: "Richard Sprague"
+date: "3/22/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+So many things are happening simultaneously during my experiment that it can be hard to keep track of which changes are statistically significant and which aren't. On top of that, the samples aren't entirely independent from one another: they're taken from the same person, for example, and they are taken in order. You'd expect that many samples would more closely resemble others for just that reason. How can we separate all these different and somewhat correlated aspects of the sample-taking process?
+
+One promising method comes recently from two bioinformaticians at the University of Pennsylvania, Eric Z. Chen and Hongzhe Li, who wrote a paper called [A two-part mixed-effects model for analyzing longitudinal microbiome compositional data](https://academic.oup.com/bioinformatics/article-abstract/32/17/2611/2450750/A-two-part-mixed-effects-model-for-analyzing?rss=1). The source code for their paper is [available on Github](https://github.com/chvlyl/ZIBR), so I tried it on my data.
+
+
+
+We load the ZIBR library like this:
+```{r}
+
+# uncomment the first time you run on a new machine. 
+# library(devtools)
+# devtools::install_github("chvlyl/ZIBR")  # only needed first time
+library(ZIBR)
+
+```
+
+# Reading the data
+
+I pre-built a CSV file with the values that will be needed by the ZIBR algorithm. (If you want to know how I built the file, see the code [here](http://local)). Let's read the file into the variable ``kombucha.data```, which is a dataframe with the following columns:
+```{r readData}
+kombucha.data <- read.csv("./data/kombuchaDataZIBR.csv")
+head(kombucha.data[1:5,1:6])
+```
+
+* ```Sample``` : a unique identifier for each sample
+* ```Date```: date the sample was taken
+* ```Treatment```: day I drank kombucha = 1, days of no kombucha = 0
+
+The other columns indicate the percentage abundance level for each genus found in the sample. There are hundreds of these, so I'm only showing the first few.
+
+Ordinarily there would be another column to identify the subject, which might be different for each sample. But in this case, there's only one subject, me, so I'll simplify and eliminate that variable. In other words, think of the experiment as consisting of exactly 22 samples: half the samples were taken after drinking kombucha; and the other half without kombucha. If you prefer, we could consider these to be two separate subjects: a guy who drinks kombucha and another who doesn't. But that maps directly on to the Treatment variable, so I could use that as the proxy for subject name if necessary.
+
+The logistic covariant is a logical value for each sample: Did I drink kombucha that day? If so, the value is 1. Otherwise the value is 0.
+
+To simplify the calculations during my first run, I'll set the beta covariate to be the same as the logistic one.
+
+Creating the logistic covariate from this data requires a teeny bit of R magic. Because the data 
+```{r}
+
+logistic.cov = as.matrix(cbind(as.numeric(as.character(kombucha.data[,c("Sample")])), as.numeric(kombucha.data[,"Treatment"]))) 
+
+```
+
+
+Y is the response value. Since I want to know whether or not a particular taxa is affected by kombucha drinking, I set this to a vector of abundance values, i.e. the percentage of the taxa that was found in the sample.
+
+Finally, ```subject.ind``` is a vector of unique identifiers for each sample, and ```time.ind``` is the time at which that subject took the sample. Please note that there is no attempt to space the times out consistently. The samples are simply taken when they are taken.
+
+
+run the zibr algorithm:
+```
+kombucha.fit <- zibr(logistic.cov = logistic.cov,
+     beta.cov = logistic.cov ,
+     Y = kombucha.data[,"Staphylococcus"], # data[,-c(1,2,3)],
+     subject.ind = kombucha.data$Sample,
+     time.ind = kombucha.data$Date)
+```
+
+Unfortunately, I get the following error:
+```
+Error in X.aug %*% alpha[, rep(1, quad.n)] + gh.nodes * s1 * sqrt(2) : 
+  non-conformable arrays
+```
+
+and that's where I'm stumped for now.
+
+
+
+
+
