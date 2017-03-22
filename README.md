@@ -1,7 +1,7 @@
 # Kombucha and the microbiome
 This is a public data set for analyzing how a gut microbiome is affected by drinking kombucha.  You are welcome to study this as much as you like, provided you give your feedback. Contact me on Twitter [@sprague](http://twitter.com/sprague) or update the [Wiki associated with this repository](https://github.com/richardsprague/kombucha/wiki).
 
-Update 3/21/2017: I just added some new [ZIBR statistical analysis](./kombuchaZIBR.md). It's not working yet.
+Update 3/21/2017: I just added some new [ZIBR statistical analysis](./kombuchaZIBR.Rmd). It's not working yet.
 
 # Experiment
 For seven days, from July 27 to August 2, 2016, I drank 48 ounces per day of commercially-purchased kombucha. I tested my gut microbiome with a uBiome Explorer kit each day, as well as my mouth and skin microbiome at intervals during the experiment.
