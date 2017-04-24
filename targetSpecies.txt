@@ -1,0 +1,14 @@
+Bifidobacterium longum
+Lactobacillus crispatus
+Lactobacillus johnsonii
+Lactobacillus rhamnosus
+Lactobacillus algidus
+Lactobacillus delbrueckii
+Bifidobacterium adolescentis
+Lactobacillus salivarius
+Bifidobacterium animalis
+Bifidobacterium tsurumiense
+Bifidobacterium breve
+Bifidobacterium catenulatum
+Lactobacillus ruminis
+Bifidobacterium bifidum

@@ -1,0 +1,149 @@
+---
+title: "kefirExperiment1"
+author: "Richard Sprague"
+date: "3/27/2017"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+DATA_DIR <- paste0(Sys.getenv("UBIOME_DATADIR"),"/ubiome_people/ub_data-Richard_Sprague")
+
+```
+
+# Raw Milk Kefir
+Since January 23, I've been drinking about two cups of fresh kefir, home made with raw, unpasteurized milk. Kefir is one of the easiest fermented drinks you can make. Here's what I do every morning:
+
+1. Gently reach into yesterday's kefir bottle and remove the grains that are floating at the top. They're an easy-to-recognize clump that I can grab with my fingers. 
+2. Put the grains into a new bottle and pour new milk over them.
+3. Drink the kefir batch that I made yesterday.
+
+That's it!
+
+# How I run the numbers
+
+## Load the data
+
+```{r, message= FALSE}
+library(actino)
+library(phyloseq)
+
+f <- just_json_files_in(DATA_DIR)  # this variable holds the path to all my JSON files. 
+m <- paste0(DATA_DIR,'/Richard_Sprague_Mapfile.xlsx')
+
+load(paste0(DATA_DIR,"/derived/spragueGenusLatest.RData"))
+load(paste0(DATA_DIR,"/derived/spragueAllRanks.RData"))
+
+# sprague.ps.genus <- phyloseq_from_JSON_at_rank(f,m)
+sprague.ps.genus <- sprague.genus.norm
+
+#sample_data(sprague.ps.genus)$Date <- as.Date(sample_data(sprague.ps.genus)$Date, origin = "1899-12-30")
+
+#sample_data(sprague.ps.genus)$Date <- as.Date(sample_data(sprague.ps.genus)$Date, origin = "1899-12-30")
+#colnames(tax_table(sprague.ps.genus)) <- "Genus"
+
+```
+
+and then load just the data for the experiment:
+
+```{r experimentLoad }
+
+targetTaxa <- c("Bifidobacterium","Lactobacillus")
+kefir.genus <- subset_samples(sprague.ps.genus, Site == "gut" & grepl("[K|k]efir",Label))
+sprague.ps.2017 <- subset_samples(sprague.ps.genus, Site == "gut" & Date > "2016-12-01")
+sample_data(sprague.ps.2017)$Experiment <- "None"
+
+k <- which(sample_data(sprague.ps.2017)$SSR %in% sample_data(kefir.genus)$SSR)
+
+sample_data(sprague.ps.2017)$Experiment[k] <- "Kefir"
+
+x = sample_data(sprague.ps.2017)$Date[which(sample_data(sprague.ps.2017)$Experiment == "Kefir")]
+#xend = which(sample_data(ps.short)$Date == "2016-11-02")
+sample_data(sprague.ps.2017)$Experiment
+```
+
+
+# Normalization
+
+The data so far hasn't been normalized, so let's transform it: all count information by the total number of reads in the sample
+
+```{r}
+#sprague.ps.2017.norm <- transform_sample_counts(sprague.ps.2017, function (x) x / sum(x))
+sprague.ps.2017.norm <- sprague.ps.2017 #already normalized
+
+```
+
+
+# Rarefaction
+
+But there's still too much variability in total read counts, sample-to-sample. Rarefaction helps correct this statistically, by putting all samples on a level playing field.
+
+```{r rarefaction}
+sprague.ps.2017 # before
+sprague.ps.2017.rare <- sprague.ps.2017.norm  # skip rarefaction for now.
+#sprague.ps.2017.rare <-rarefy_even_depth(sprague.ps.2017)
+sprague.ps.2017.rare #after
+```
+
+# Annotations
+
+```{r}
+#x = which(sample_data(ps.short)$Date == "2016-10-24")
+#xend = which(sample_data(ps.short)$Date == "2016-11-02")
+#annotate("pointrange",x = x, y = y, ymin = 2, ymax = 2, color = "blue", size = 2)
+```
+
+
+# Plot
+
+```{r}
+library(ggplot2)
+plot_bar(subset_taxa(sprague.ps.2017.rare, Genus %in% targetTaxa),
+         fill="Genus",
+         x="Date",
+         title = "Rarefied (not reallY)")  +
+  #annotate("pointrange",x = x, y = -.001, ymin = 0, ymax = .001, color = "blue", size = 1)
+  annotate("segment", x = x, xend = x, y = -0.003, yend = -0.003, color = "blue", size=2) +
+  geom_text(aes(label = Label))
+
+
+plot_bar(subset_taxa(sprague.ps.2017.norm, Genus %in% targetTaxa),
+         fill="Genus", 
+         x="Date",
+         title = "Normalized") #+ 
+  #annotate("segment", x = x-0.5, xend = x+0.5, y = -0.003, yend = -0.003, color = "blue", size=2)
+
+
+#kefir.ord <- ordinate(sprague.ps.2017.rare, "NMDS")
+# plot_ordination(sprague.ps.2017.rare,kefir.ord,
+#                 color = "Experiment",
+#                 label = "Date") +
+#   geom_point(size = 5) +
+#     ggtitle("NMDS Ordination (Bray-Curtis) after Rarefaction")
+
+
+kefir.norm.ord <- ordinate(sprague.ps.2017.norm, "NMDS")
+plot_ordination(sprague.ps.2017.norm,kefir.norm.ord,
+                color = "Experiment",
+                label = "Date") +
+  geom_point(size = 5) +
+    ggtitle("NMDS Ordination (Bray-Curtis) after Normalization")
+
+
+```
+
+# Heatmap
+
+The top 20 genus-level taxa:
+
+```{r}
+plot_heatmap(prune_taxa(names(sort(taxa_sums(sprague.ps.2017.norm),TRUE)[1:20]),sprague.ps.2017.norm), sample.label = "Label", sample.order = "Date")
+```
+
+
+
+
+```{r}
+print(data.frame(Date = sample_data(sprague.ps.2017)$Date,
+               Label = sample_data(sprague.ps.2017)$Label))
+```
+

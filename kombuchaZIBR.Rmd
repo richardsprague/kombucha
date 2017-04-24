@@ -1,7 +1,7 @@
 ---
 title: "ZIBR Stats Analysis"
 author: "Richard Sprague"
-date: "3/22/2017"
+date: "3/24/2017"
 output: html_document
 ---
 
@@ -28,7 +28,7 @@ library(ZIBR)
 
 # Reading the data
 
-I pre-built a CSV file with the values that will be needed by the ZIBR algorithm. (If you want to know how I built the file, see the code [here](http://local)). Let's read the file into the variable ``kombucha.data```, which is a dataframe with the following columns:
+I pre-built a CSV file with the values that will be needed by the ZIBR algorithm. (If you want to know how I built the file, see the code [here](http://local)). Let's read the file into the variable ```kombucha.data```, which is a dataframe with the following columns:
 ```{r readData}
 kombucha.data <- read.csv("./data/kombuchaDataZIBR.csv")
 head(kombucha.data[1:5,1:6])
@@ -46,7 +46,7 @@ The logistic covariant is a logical value for each sample: Did I drink kombucha 
 
 To simplify the calculations during my first run, I'll set the beta covariate to be the same as the logistic one.
 
-Creating the logistic covariate from this data requires a teeny bit of R magic. Because the data 
+Creating the logistic covariate from this data requires a teeny bit of arcane R conversion to turn factors into the numeric vectors needed by ZIBR.
 ```{r}
 
 logistic.cov = as.matrix(cbind(as.numeric(as.character(kombucha.data[,c("Sample")])), as.numeric(kombucha.data[,"Treatment"]))) 

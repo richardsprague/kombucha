@@ -1,0 +1,120 @@
+---
+title: "Kombucha experiment meets Phyloseq"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+DATA_DIR <- paste0(Sys.getenv("UBIOME_DATADIR"),"/ubiome_people/ub_data-Richard_Sprague")
+
+```
+
+# Experiment
+For seven days, from July 27 to August 2, 2016, I drank 48 ounces per day of commercially-purchased kombucha. I tested my gut microbiome with a uBiome Explorer kit each day, as well as my mouth and skin microbiome at intervals during the experiment.
+
+The results of each uBiome Explorer test are in the [data](./data) directory in a series of JSON-formatted files.
+
+```{r, message=FALSE}
+library(phyloseq)
+library(actino)
+library(ggplot2)
+
+f <- just_json_files_in(DATA_DIR)  # this variable holds the path to all my JSON files. 
+m <- paste0(DATA_DIR,'/Richard_Sprague_Mapfile.xlsx')
+
+ps <- phyloseq_from_JSON_at_rank(f,m,rank="genus")
+ps.species <- phyloseq_from_JSON_at_rank(f,m,rank="species")
+sample_data(ps)$Date <- sapply(lapply(sample_data(ps)[['Date']],
+                                                 as.Date,
+                                                 origin = "1899-12-30"), # not sure why this origin gives correct answers
+                                          as.character)
+sample_data(ps.species)$Date <- sapply(lapply(sample_data(ps)[['Date']],
+                                                 as.Date,
+                                                 origin = "1899-12-30"), # not sure why this origin gives correct answers
+                                          as.character)
+kombucha <- subset_samples(ps, Site == "gut"  & Date > "2016-07-26"  & Date < "2016-08-09")
+kombucha.species <- subset_samples(ps.species, Site == "gut"  & Date > "2016-07-26"  & Date < "2016-08-09")
+```
+The new object ```kombucha``` is a phyloseq object. Note that I created two versions, one that looked at the genus rank and the other at species. Both of them contain the same sample data, however: 
+
+```{r}
+sample_data(kombucha)[,c(1:4,7)]
+
+```
+
+To simplify later calculations and plotting, let's add another column (variable) ```Experiment``` that is set to either "Kombucha" on days I drank it, and "None" on days I didn't:
+
+```{r}
+sample_data(kombucha)$Experiment <- 
+  ifelse(grepl("Kombucha",sample_data(kombucha)$Label),"Kombucha","None")
+sample_data(kombucha.species)$Experiment <- sample_data(kombucha)$Experiment
+```
+
+
+The data is still raw, containing the un-processed abundance data from the Illumina sequencer. Because there are differences in the way the DNA from the microbes are read in each sample (called “reads”), the total number of reads can vary significantly from sample to sample. For that reason, we generally don’t compare the absolute abundances found in each sample; instead we calculate the percentages. To do that, we first must compute the normalized abundances:
+
+```{r}
+sample_data(kombucha)
+kombucha.norm <- transform_sample_counts(kombucha, function(x) x / sum(x))
+  
+  #transform_sample_counts(prune_taxa(taxa_sums(kombucha) > 10,kombucha), function(x){x / sum(x)})
+kombucha.species.norm <- transform_sample_counts(prune_taxa(taxa_sums(kombucha.species) > 10,kombucha.species), function(x){x / sum(x)})
+
+```
+
+
+# Genus Level Analysis
+
+Now let's graph it at the genus level:
+
+```{r}
+colnames(tax_table(kombucha.norm)) <- c(g = "Genus")
+
+targetTaxa <- c("Bifidobacterium","Lactobacillus")
+
+plot_bar(subset_taxa(kombucha.norm, Genus %in% targetTaxa),
+         fill="Genus",
+         x="Date") 
+```
+
+
+
+Now let's cluster the samples
+
+```{r, message = FALSE}
+kombucha.ord <- ordinate(kombucha.norm, method = "NMDS", distance = "bray")
+plot_ordination(kombucha.norm, kombucha.ord, color = "Experiment") +
+  geom_point(size = 5, alpha = 0.7) + geom_text(aes(label = strftime(Date,format = "%m-%d")),size=4, nudge_y=0.025)
+```
+
+and try a heatmap, just looking at the top 20 taxa (in this case at the genus rank);
+
+```{r}
+plot_heatmap(prune_taxa(names(sort(taxa_sums(kombucha.norm),TRUE)[1:20]),kombucha.norm), sample.label = "Label", sample.order = "Date")
+```
+
+# Diversity
+
+```{r, warning= FALSE}
+#kombucha.int <- transform_sample_counts(kombucha,function (x) round(x*100))
+plot_richness(kombucha,x="Label",measures=c("Observed","InvSimpson","Fisher"))
+```
+
+# Species Level Analysis
+uBiome's 16S technology only looks at the V4 subunit, with less than 300 reads in each direction. That's plenty for most genus and above analysis, but it gets strained at the species level. Still, some of the species *are* visible, so let's look at the most common ones:
+
+
+```{r}
+colnames(tax_table(kombucha.species)) <- c(g = "Species")
+targetTaxa <- as.character(read.table("targetSpecies.txt", sep="\n")[,1])
+
+plot_heatmap(prune_taxa(names(sort(taxa_sums(kombucha.species),TRUE)[1:20]),kombucha.species), sample.label = "Label", sample.order = "Date")
+
+plot_bar(subset_taxa(kombucha.species, Species %in% targetTaxa),
+         fill="Species",
+         x="Label") 
+```
+
+Note that because this is species level, this figure differs from genus one above because not every species within the genus is identifiable.
